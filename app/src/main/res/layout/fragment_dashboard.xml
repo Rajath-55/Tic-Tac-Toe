@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="androidsamples.java.tictactoe.DashboardFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardFragment">
+
+
+  <TextView
+      android:id="@+id/textView6"
+      android:layout_width="34dp"
+      android:layout_height="19dp"
+      android:layout_marginBottom="10dp"
+      android:text="@string/wins"
+      android:textAlignment="center"
+      android:textColor="#2E7D32"
+      android:textSize="12sp"
+      app:layout_constraintBottom_toTopOf="@+id/list_ll"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.233"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0" />
+
+  <TextView
+      android:id="@+id/lost_score"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/_0"
+      android:textAlignment="center"
+      android:textColor="@color/black"
+      android:textSize="32sp"
+      app:layout_constraintBottom_toTopOf="@+id/list_ll"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.743"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/losses"
+      android:textAlignment="center"
+      android:textColor="#DD2C00"
+      android:textSize="12sp"
+      app:layout_constraintBottom_toTopOf="@+id/list_ll"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.846"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.876" />
+
+  <TextView
+      android:id="@+id/won_score"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/_0"
+      android:textAlignment="center"
+      android:textColor="@color/black"
+      android:textSize="32sp"
+      app:layout_constraintBottom_toTopOf="@+id/list_ll"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.157"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0" />
+
+  <LinearLayout
+      android:id="@+id/list_ll"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent">
+
+
+    <TextView
+        android:id="@+id/open_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/game_info"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:listitem="@layout/fragment_item" />
+  </LinearLayout>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fab_new_game"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/text_margin"
+      android:contentDescription="@string/new_game"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:srcCompat="@android:drawable/ic_input_add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
